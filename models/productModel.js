@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const ProductSchema = mongoose.Schema({
   name: String,
   desc: String,
+  id: Number,
 }, { timestamps: { updatedAt: 'lastModifiedDate' } });
 
 ProductSchema.pre('save', function (next) {

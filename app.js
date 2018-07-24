@@ -6,6 +6,7 @@ const productRouter = require('./routers/productRouter');
 const userRouter = require('./routers/userRouter');
 
 const db = require('./db');
+const init = require('./init');
 
 const app = express();
 

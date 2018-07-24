@@ -3,11 +3,12 @@ const mongoose = require('mongoose');
 const CitySchema = mongoose.Schema({
   name: String,
   country: String,
-  capital: Boolean,
+  capital: { type: Boolean, default: false },
   location: {
-    lat: Number,
-    long: Number,
-  }
+    lat: { type: Number, default: 0 },
+    long: { type: Number, default: 0 },
+  },
+  id: Number,
 }, { timestamps: { updatedAt: 'lastModifiedDate' } });
 
 CitySchema.pre('save', function (next) {
